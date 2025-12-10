@@ -32,12 +32,28 @@ uvicorn app.main:app --reload
 
 Проект использует JWT-токены и механизм OAuth2PasswordBearer.
 Основной процесс:
+
 Пользоваетль регистрируется через `POST /auth/register`
-
+```json
+{
+  "email": "user@example.com",
+  "password": "string123"
+}
+```
 Пользователь логинится через `POST /auth/login`
-
+```json
+{
+  "email": "user@example.com",
+  "password": "string123"
+}
+```
 При успешной аутентификации сервер выдаёт JWT-токен.
-
+```json
+{
+  "access_token": "jwt-token",
+  "token_type": "bearer"
+}
+```
 Алгоритм:
  - Пользователь отправляет email + пароль
  - Сервер проверяет хэш пароля
