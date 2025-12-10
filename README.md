@@ -12,6 +12,7 @@ docker-compose up --build
 ```
 
 Наш сервис: http://localhost:8000/
+
 Swagger UI: http://localhost:8000/docs
 
 ### **Вариант 2 вручную**
